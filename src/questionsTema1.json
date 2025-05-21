@@ -1,0 +1,252 @@
+[
+    {
+      "question": "¿Cuál es la primera fase en la misión de un departamento de datos?",
+      "options": ["Recopilación", "Análisis", "Almacenamiento", "Ciencia de datos"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué proceso implica la eliminación de errores, valores nulos o duplicados?",
+      "options": ["Recopilación", "Limpieza y preparación", "Almacenamiento", "Análisis"],
+      "correct": 1
+    },
+    {
+      "question": "¿Cuál es el objetivo principal del análisis de datos en la empresa?",
+      "options": ["Construir modelos de IA", "Crear informes y dashboards", "Almacenar datos", "Gobernanza"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué componente garantiza la seguridad y el cumplimiento normativo (GDPR)?",
+      "options": ["Almacenamiento", "Ciencia de datos", "Gobernanza y seguridad", "Recopilación"],
+      "correct": 2
+    },
+    {
+      "question": "¿En qué fase se construyen modelos de IA para automatización y predicción?",
+      "options": ["Ciencia de datos", "Análisis", "Almacenamiento", "Recopilación"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué tipo de datos se recogen de fuentes externas?",
+      "options": ["Ventas internas", "CRM interno", "Mercado y competencia", "Dashboards"],
+      "correct": 2
+    },
+    {
+      "question": "¿Cuál NO es una de las Cinco C de la calidad de los datos?",
+      "options": ["Clean", "Consistent", "Conformed", "Complex"],
+      "correct": 3
+    },
+    {
+      "question": "¿Qué significa 'Clean'?",
+      "options": ["Actualizados", "Libres de errores", "Coherentes", "Completos"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué significa 'Consistent'?",
+      "options": ["Limpios", "Coherentes", "Actualizados", "Conformados"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué C indica que los datos estén actualizados?",
+      "options": ["Clean", "Consistent", "Current", "Comprehensive"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué C se refiere a que los datos tengan suficiente detalle?",
+      "options": ["Comprehensive", "Conformed", "Current", "Clean"],
+      "correct": 0
+    },
+    {
+      "question": "¿Quién supervisa globalmente el departamento de datos?",
+      "options": ["Data Architect", "CDO", "Data Engineer", "Data Scientist"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué equipo crea y mantiene almacenes y flujos de datos?",
+      "options": ["Data Science", "Data Governance", "Arquitectura e Ingeniería de Datos", "Data Value"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué equipo se encarga de regulaciones, seguridad y calidad del dato?",
+      "options": ["Data Value", "Gobierno del Dato", "Data Engineering", "Data Science"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué equipo conecta el negocio y genera visualizaciones y KPIs?",
+      "options": ["Data Value", "Data Architect", "Data Governance", "Data Warehouse"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué equipo desarrolla modelos de Machine Learning e IA?",
+      "options": ["Data Science", "Data Security", "Data Governance", "Data Warehouse"],
+      "correct": 0
+    },
+    {
+      "question": "¿Cuál es el enfoque principal de Business Intelligence (BI)?",
+      "options": ["Análisis prescriptivo", "Análisis descriptivo", "Análisis predictivo", "Ciencia de datos"],
+      "correct": 1
+    },
+    {
+      "question": "¿Cuál NO es una de las 3 Vs del Big Data?",
+      "options": ["Volumen", "Velocidad", "Variedad", "Validez"],
+      "correct": 3
+    },
+    {
+      "question": "¿Qué disciplina se ocupa de infraestructuras, pipelines y automatización?",
+      "options": ["Data Engineering", "Business Intelligence", "Data Science", "Big Data"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué disciplina utiliza modelos estadísticos e IA para predicción?",
+      "options": ["BI", "Big Data", "Data Science", "Data Engineering"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué tipo de analítica responde a '¿Qué ha ocurrido?'?",
+      "options": ["Descriptiva", "Predictiva", "Prescriptiva", "Exploratoria"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué analítica anticipa posibles escenarios futuros?",
+      "options": ["Descriptiva", "Predictiva", "Prescriptiva", "Diagnóstica"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué tipo de analítica propone '¿Qué deberíamos hacer?'?",
+      "options": ["Descriptiva", "Predictiva", "Prescriptiva", "Correctiva"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué analítica utiliza simulaciones y optimización para mejorar decisiones?",
+      "options": ["Descriptiva", "Predictiva", "Prescriptiva", "Data Mining"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué significa ETL?",
+      "options": ["Extract, Transform, Load", "Evaluate, Transfer, Load", "Extract, Transfer, Load", "Extract, Transform, Link"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué repositorio almacena grandes volúmenes de datos en su formato nativo?",
+      "options": ["Data Warehouse", "Data Mart", "Data Lake", "OLAP"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué sistema permite análisis multidimensionales?",
+      "options": ["Data Mart", "Data Lakehouse", "OLAP", "ETL"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué proceso identifica patrones en grandes volúmenes de datos?",
+      "options": ["Data Mining", "Data Profiling", "Data Cleansing", "Data Governance"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué término se refiere a 'datos sobre los datos'?",
+      "options": ["Metadata", "MDM", "Data Mart", "Data Lake"],
+      "correct": 0
+    },
+    {
+      "question": "¿Cómo se denominan las consultas puntuales sin definición previa?",
+      "options": ["Ad hoc queries", "Static queries", "Batch queries", "OLAP"],
+      "correct": 0
+    },
+    {
+      "question": "¿Cuál es el modelo de datos de una base SQL?",
+      "options": ["No relacional", "Relacional", "Clave-valor", "Documental"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué propiedad garantizan las bases de datos SQL?",
+      "options": ["BASE", "CAP", "ACID", "CRUD"],
+      "correct": 2
+    },
+    {
+      "question": "¿Cuál es una limitación típica de SQL?",
+      "options": ["Esquema dinámico", "No soporta JOIN", "Escalabilidad horizontal limitada", "Consistencia eventual"],
+      "correct": 2
+    },
+    {
+      "question": "¿Cuál NO es un tipo de base de datos NoSQL?",
+      "options": ["Clave-valor", "Documental", "Tabular", "Grafos"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué sistema NoSQL utiliza pares clave-valor?",
+      "options": ["Redis", "MongoDB", "Cassandra", "Neo4j"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué NoSQL almacena datos en documentos JSON/BSON?",
+      "options": ["MongoDB", "Redis", "HBase", "Neo4j"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué NoSQL es ideal para modelar grafos?",
+      "options": ["Cassandra", "Neo4j", "Redis", "MariaDB"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué NoSQL es columnar?",
+      "options": ["Redis", "Cassandra", "Neo4j", "MongoDB"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué tipo de consistencia suele ofrecer NoSQL?",
+      "options": ["Fuerte", "Eventual", "Transaccional", "Rígida"],
+      "correct": 1
+    },
+    {
+      "question": "¿Cuál es un uso típico de SQL?",
+      "options": ["IoT", "ERP", "Big Data", "Social media"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué caso de uso es ideal para NoSQL?",
+      "options": [ "ERP financiero", "CRM", "IoT en tiempo real", "Sistemas ERP tradicionales"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué ventaja ofrece un Data Lakehouse?",
+      "options": ["Solo datos estructurados", "Combina Data Lake y Data Warehouse", "No permite transacciones", "Es siempre on-premise"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué fase del ciclo de vida de datos implica extracción y carga?",
+      "options": ["Data Science", "Data Warehouse", "ETL", "OLAP"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué herramienta tradicional proporciona dashboards para BI?",
+      "options": ["OLAP", "Dashboards", "NoSQL", "Edge Computing"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué proceso corrige errores y completa valores en los datos?",
+      "options": ["Data Mining", "Data Profiling", "Data Cleansing", "Data Integration"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué es 'Self-Service' en el contexto de datos?",
+      "options": ["Herramientas que requieren TI", "Pipelines manuales", "Herramientas intuitivas para usuarios", "Data Science"],
+      "correct": 2
+    },
+    {
+      "question": "¿Qué herramienta gestiona datos maestros como clientes o productos?",
+      "options": ["ETL", "MDM", "OLAP", "BI Appliance"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué repositorio almacena subconjuntos de datos para un área específica?",
+      "options": ["Data Lake", "Data Mart", "Data Warehouse", "OLTP"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué técnica analiza datos fuente para detectar anomalías?",
+      "options": ["Data Mining", "Data Profiling", "Data Cleansing", "BI Tool"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué arquitectura permite procesar datos cerca de la fuente?",
+      "options": ["Cloud Computing", "Edge Computing", "Data Lake", "Data Mart"],
+      "correct": 1
+    }
+  ]

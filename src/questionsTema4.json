@@ -1,0 +1,167 @@
+[
+    {
+      "question": "¿Cuál es la principal característica de las bases de datos NoSQL?",
+      "options": [
+        "Esquema fijo y relaciones estrictas",
+        "Manejo de datos no estructurados o semi-estructurados sin esquema fijo",
+        "Garantía de consistencia fuerte ACID",
+        "Uso exclusivo de SQL para consultas"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué modelo NoSQL almacena datos como pares clave-valor?",
+      "options": ["Documental", "Columna", "Clave-Valor", "Grafo"],
+      "correct": 2
+    },
+    {
+      "question": "¿Cuál de estos es un ejemplo de base de datos documental?",
+      "options": ["Redis", "MongoDB", "Cassandra", "Neo4j"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué NoSQL está optimizado para relaciones complejas y grafos?",
+      "options": ["MongoDB", "Redis", "Cassandra", "Neo4j"],
+      "correct": 3
+    },
+    {
+      "question": "¿Qué propiedad suelen sacrificar las bases NoSQL según el teorema CAP?",
+      "options": ["Disponibilidad", "Consistencia eventual", "Particionamiento", "Consistencia fuerte"],
+      "correct": 3
+    },
+    {
+      "question": "¿Qué interfaz gráfica ofrece MongoDB oficialmente?",
+      "options": ["Mongo Studio", "MongoCompass", "MongoGUI", "MongoShell"],
+      "correct": 1
+    },
+    {
+      "question": "¿Cómo se llama el servicio DBaaS de MongoDB en la nube?",
+      "options": ["MongoCloud", "Atlas", "Compass Cloud", "MongoHost"],
+      "correct": 1
+    },
+    {
+      "question": "En MongoDB, ¿cómo insertas un único documento desde la shell?",
+      "options": [
+        "db.collection.insert(doc)",
+        "db.collection.insertOne(doc)",
+        "db.collection.addOne(doc)",
+        "db.insertOne(collection, doc)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué método insertar varios documentos a la vez?",
+      "options": ["insertMany()", "bulkInsert()", "addMany()", "insertAll()"],
+      "correct": 0
+    },
+    {
+      "question": "¿Cuál es el tipo de dato binario de MongoDB optimizado para archivos grandes?",
+      "options": ["BLOB", "GridFS", "BinarySet", "FileChunk"],
+      "correct": 1
+    },
+    {
+      "question": "En el modelo relacional vs MongoDB, ¿qué corresponde a una tabla?",
+      "options": ["Colección", "Documento", "Campo", "Shard"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué comando shell cambia el contexto a una base de datos sin crearla físicamente?",
+      "options": ["use <db>", "connect <db>", "switch <db>", "db <db>"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué operador de consulta en find() busca documentos donde edad > 25?",
+      "options": ["{ edad: { $lt: 25 } }", "{ edad: { $gt: 25 } }", "{ edad: > 25 }", "{ $gt: edad: 25 }"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué hace el operador $exists en una consulta?",
+      "options": [
+        "Filtra por tamaño de array",
+        "Filtra documentos donde el campo existe",
+        "Cuenta documentos existentes",
+        "Ordena por existencia"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "¿Cómo filtrar documentos que tienen un campo anidado ciudad = 'Madrid'?",
+      "options": [
+        "{ ciudad: 'Madrid' }",
+        "{ 'direccion.ciudad': 'Madrid' }",
+        "{ direccion: { ciudad: 'Madrid' } }",
+        "{ $match: { ciudad: 'Madrid' } }"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué función de MongoDB se usa para consultas simples?",
+      "options": ["aggregate()", "find()", "match()", "project()"],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué función permite pipelines complejos con $match, $group y más?",
+      "options": ["find()", "aggregate()", "pipeline()", "complexQuery()"],
+      "correct": 1
+    },
+    {
+      "question": "En un pipeline, ¿qué etapa reemplaza JOIN de SQL?",
+      "options": ["$group", "$lookup", "$unwind", "$project"],
+      "correct": 1
+    },
+    {
+      "question": "¿Para qué sirve $unwind en un pipeline?",
+      "options": [
+        "Para filtrar documentos",
+        "Para aplanar arrays en múltiples documentos",
+        "Para agrupar datos",
+        "Para proyectar campos"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "¿Qué operador sumariza y agrupa datos (equivalente a GROUP BY)?",
+      "options": ["$group", "$match", "$sort", "$count"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué operador en pipeline selecciona y transforma campos?",
+      "options": ["$project", "$select", "$transform", "$filter"],
+      "correct": 0
+    },
+    {
+      "question": "¿Cómo guardas el resultado de un pipeline en una nueva colección?",
+      "options": ["$out", "$merge", "$save", "$write"], 
+      "correct": 0
+    },
+    {
+      "question": "¿Cuál es la diferencia entre $out y $merge?",
+      "options": [
+        "Ambos reemplazan la colección",
+        "$out reemplaza, $merge actualiza o inserta según correspondan",
+        "$merge reemplaza, $out actualiza",
+        "No hay diferencia"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "En Python con pymongo, ¿qué módulo permite usar GridFS?",
+      "options": ["gridfs", "bson", "fs", "pymongo.fs"], 
+      "correct": 0
+    },
+    {
+      "question": "¿Qué comando limita resultados en find()?",
+      "options": ["limit()", "max()", "count()", "filter()"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué operador en pipeline añade un campo condicional (if/else)?",
+      "options": ["$cond", "$when", "$if", "$switch"],
+      "correct": 0
+    },
+    {
+      "question": "¿Qué etapa de pipeline ordena documentos?",
+      "options": ["$sort", "$order", "$arrange", "$rank"],
+      "correct": 0
+    }
+  ]
