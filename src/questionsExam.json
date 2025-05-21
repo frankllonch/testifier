@@ -1,0 +1,182 @@
+[
+    {
+      "question": "¿Qué comando SQL se utiliza para eliminar duplicados en los resultados de una consulta?",
+      "options": ["DISTINCT", "GROUP BY", "DELETE", "UNIQUE"],
+      "correct": 0,
+      "explanation": "DISTINCT se emplea en la cláusula SELECT para que el conjunto de resultados no incluya filas duplicadas."
+    },
+    {
+      "question": "¿Qué operación SQL combina filas de dos tablas basándose en una condición de coincidencia?",
+      "options": ["JOIN", "UNION", "MERGE", "INTERSECT"],
+      "correct": 0,
+      "explanation": "JOIN permite relacionar filas de dos tablas a partir de una condición de igualdad entre columnas."
+    },
+    {
+      "question": "¿Qué cláusula se usa para filtrar grupos después de aplicar GROUP BY?",
+      "options": ["WHERE", "HAVING", "ORDER BY", "LIMIT"],
+      "correct": 1,
+      "explanation": "HAVING aplica condiciones a los resultados de GROUP BY, mientras que WHERE filtra filas antes de agrupar."
+    },
+    {
+      "question": "¿Cuál es la diferencia clave entre INNER JOIN y LEFT JOIN?",
+      "options": ["INNER JOIN solo filas coincidentes; LEFT JOIN incluye todas las de la izquierda", "LEFT JOIN solo filas coincidentes; INNER JOIN todas", "INNER JOIN elimina duplicados; LEFT JOIN no", "No hay diferencia"],
+      "correct": 0,
+      "explanation": "INNER JOIN devuelve solo filas que cumplen la condición en ambas tablas; LEFT JOIN devuelve todas las filas de la tabla izquierda y las coincidentes de la derecha."
+    },
+    {
+      "question": "¿Qué comando se usa para crear un índice en una columna de SQL?",
+      "options": ["CREATE INDEX", "ADD INDEX", "NEW INDEX", "MAKE INDEX"],
+      "correct": 0,
+      "explanation": "CREATE INDEX crea un índice que acelera consultas sobre las columnas especificadas."
+    },
+    {
+      "question": "En las propiedades ACID de las transacciones, ¿qué significa Atomicidad?",
+      "options": ["La transacción es todo o nada", "Los datos siempre están consistentes", "Las transacciones no interfieren", "Los cambios son permanentes"],
+      "correct": 0,
+      "explanation": "Atomicidad garantiza que una transacción se complete por completo o no se aplique en absoluto."
+    },
+    {
+      "question": "¿Qué forma normal elimina dependencias transitivas entre atributos no clave?",
+      "options": ["Tercera Forma Normal (3NF)", "Primera Forma Normal (1NF)", "Segunda Forma Normal (2NF)", "Forma Normal de Boyce–Codd (BCNF)"],
+      "correct": 0,
+      "explanation": "La 3NF requiere que no existan dependencias transitivas de atributos no clave a la clave primaria."
+    },
+    {
+      "question": "En modelado dimensional, ¿cómo se llama el esquema organizativo para consultas de BI?",
+      "options": ["Esquema en estrella", "Esquema en copo de nieve", "Esquema relacional", "Esquema jerárquico"],
+      "correct": 0,
+      "explanation": "El esquema en estrella utiliza una tabla de hechos central rodeada de tablas de dimensiones para optimizar consultas analíticas."
+    },
+    {
+      "question": "¿Qué caracteriza a un Data Lake?",
+      "options": ["Almacena datos en bruto sin esquema fijo", "Solo almacena datos estructurados", "Requiere normalización", "Es un tipo de base relacional"],
+      "correct": 0,
+      "explanation": "Un Data Lake almacena datos en su formato original (raw), sin necesidad de esquemas previos."
+    },
+    {
+      "question": "¿Cuál es la función principal de un Data Warehouse?",
+      "options": ["Almacenar datos históricos consolidados para análisis", "Servir como base de datos transaccional", "Gestionar eventos en tiempo real", "Almacenar únicamente datos externos"],
+      "correct": 0,
+      "explanation": "Un Data Warehouse centraliza datos históricos de múltiples fuentes para reporting y análisis."
+    },
+    {
+      "question": "En un diagrama ER, ¿qué forma representa una relación?",
+      "options": ["Rombo", "Rectángulo", "Elipse", "Línea"],
+      "correct": 0,
+      "explanation": "En ER, el rombo se usa para representar relaciones entre entidades."
+    },
+    {
+      "question": "¿Qué indica una relación 1:N en un diagrama ER?",
+      "options": ["Una entidad de un lado se relaciona con muchas del otro", "Muchas entidades se relacionan con una sola", "Cada entidad solo se relaciona con otra", "No permite duplicados"],
+      "correct": 0,
+      "explanation": "1:N significa que una fila de la tabla padre puede relacionarse con múltiples filas de la tabla hija."
+    },
+    {
+      "question": "¿Cómo se denota una entidad débil en un diagrama ER?",
+      "options": ["Rectángulo doble", "Elipse", "Rombo", "Subrayado"],
+      "correct": 0,
+      "explanation": "La entidad débil se grafica con un rectángulo de doble borde y depende de otra entidad para su existencia."
+    },
+    {
+      "question": "¿Qué es un atributo multivaluado en ER?",
+      "options": ["Un atributo que puede tener múltiples valores", "Un atributo derivado", "Un atributo clave", "Un atributo compuesto"],
+      "correct": 0,
+      "explanation": "Un atributo multivaluado puede contener más de un valor para una misma entidad, como múltiples números de teléfono."
+    },
+    {
+      "question": "¿Qué es un atributo compuesto en ER?",
+      "options": ["Un atributo que se divide en subatributos", "Un atributo derivado", "Un atributo multivaluado", "Un atributo clave"],
+      "correct": 0,
+      "explanation": "Un atributo compuesto está formado por varios subatributos, como 'dirección' compuesto por calle, ciudad y código postal."
+    },
+    {
+      "question": "¿Cuál es el objetivo principal del Análisis de Componentes Principales (PCA)?",
+      "options": ["Reducir la dimensionalidad preservando la máxima varianza", "Clasificar datos en clusters", "Normalizar variables a escala 0–1", "Minimizar el número de outliers"],
+      "correct": 0,
+      "explanation": "PCA busca transformar variables en componentes que retienen la mayor varianza posible con menos dimensiones."
+    },
+    {
+      "question": "¿Por qué se estandarizan las variables antes de aplicar PCA?",
+      "options": ["Para evitar que las variables de mayor escala dominen el análisis", "Para acelerar el cálculo", "Para eliminar valores atípicos", "Para combinar variables categóricas"],
+      "correct": 0,
+      "explanation": "La estandarización asegura que todas las variables tengan varianzas comparables, evitando sesgos en la extracción de componentes."
+    },
+    {
+      "question": "¿Qué gráfico se utiliza para determinar cuántos componentes principales retener?",
+      "options": ["Scree plot", "Histograma", "Diagrama de caja", "Mapa de calor"],
+      "correct": 0,
+      "explanation": "El scree plot muestra la variación explicada por cada componente y ayuda a identificar el punto de inflexión."
+    },
+    {
+      "question": "En PCA, ¿qué representan los eigenvectores?",
+      "options": ["Las direcciones de máxima varianza en los datos", "La varianza acumulada", "Los valores singulares", "Los centroides de clusters"],
+      "correct": 0,
+      "explanation": "Los eigenvectores definen las nuevas direcciones (componentes) que capturan la mayor varianza."
+    },
+    {
+      "question": "¿Qué criterio de varianza acumulada suele usarse para seleccionar componentes en PCA?",
+      "options": ["Al menos 70–80% de la varianza total", "50% de la varianza", "100% de la varianza", "Varianza mínima"],
+      "correct": 0,
+      "explanation": "Se suelen retener los componentes que explican un alto porcentaje de la varianza total, típicamente 70–80%."
+    },
+    {
+      "question": "¿Qué método ayuda a decidir el número óptimo de clusters en K-Means?",
+      "options": ["Método del codo (elbow)", "Scree plot", "Silhouette", "DBSCAN"],
+      "correct": 0,
+      "explanation": "El método del codo evalúa la inercia (WCSS) y busca un punto de inflexión en la curva."
+    },
+    {
+      "question": "¿Qué parámetro eps controla en DBSCAN?",
+      "options": ["La distancia máxima para que dos puntos sean vecinos", "El número mínimo de puntos en un cluster", "La tasa de aprendizaje", "El número de iteraciones"],
+      "correct": 0,
+      "explanation": "eps define el radio de vecindad; dos puntos dentro de esa distancia se consideran vecinos."
+    },
+    {
+      "question": "En DBSCAN, ¿cómo se denomina un punto con al menos minPts vecinos dentro de eps?",
+      "options": ["Punto núcleo", "Punto frontera", "Punto ruido", "Punto aleatorio"],
+      "correct": 0,
+      "explanation": "Un punto núcleo cumple con el mínimo de puntos dentro de eps y forma parte central de un cluster."
+    },
+    {
+      "question": "¿Qué ventaja ofrece DBSCAN frente a K-Means?",
+      "options": ["Detecta clusters de forma arbitraria y ruido", "Siempre requiere número de clusters", "Solo funciona con distribuciones gaussianas", "Es más rápido en grandes datos"],
+      "correct": 0,
+      "explanation": "DBSCAN identifica clusters de cualquier forma y separa puntos ruido sin requerir k."
+    },
+    {
+      "question": "¿Qué métrica evalúa la calidad de separación de clusters?",
+      "options": ["Coeficiente de silueta", "Inercia", "Varianza", "Distancia euclídea"],
+      "correct": 0,
+      "explanation": "El coeficiente de silueta mide qué tan similares son los puntos dentro de su propio cluster comparado con otros clusters."
+    },
+    {
+      "question": "¿Qué método de MongoDB inserta un solo documento en una colección?",
+      "options": ["insertOne()", "insertMany()", "save()", "add()"],
+      "correct": 0,
+      "explanation": "insertOne() inserta un único documento en la colección especificada."
+    },
+    {
+      "question": "¿Cómo limitas el número de resultados devueltos por una consulta find()?",
+      "options": ["limit()", "skip()", "sort()", "match()"],
+      "correct": 0,
+      "explanation": "El método limit(n) restringe la cantidad de documentos devueltos a n."
+    },
+    {
+      "question": "¿Qué operador en un pipeline de agregación añade un campo condicional?",
+      "options": ["$cond", "$if", "$where", "$switch"],
+      "correct": 0,
+      "explanation": "$cond evalúa una condición y devuelve un valor si es verdadero y otro si es falso."
+    },
+    {
+      "question": "¿Para qué sirve la etapa $unwind en un pipeline de MongoDB?",
+      "options": ["Aplanar arrays en múltiples documentos", "Combinar colecciones", "Filtrar documentos", "Ordenar resultados"],
+      "correct": 0,
+      "explanation": "$unwind toma un array y genera un documento por cada elemento del mismo, aplanando la estructura."
+    },
+    {
+      "question": "¿Cuál es la diferencia entre $out y $merge en un pipeline de agregación?",
+      "options": ["$out reemplaza la colección; $merge actualiza o inserta según corresponda", "$merge reemplaza la colección; $out actualiza", "Son equivalentes", "Ambos eliminan la colección"],
+      "correct": 0,
+      "explanation": "$out escribe el resultado reemplazando completamente la colección; $merge fusiona datos actualizando registros existentes e insertando nuevos."
+    }
+  ]
