@@ -22,7 +22,7 @@
     "explanation": "El modelo conceptual representa de forma abstracta los elementos de negocio y sus relaciones sin preocuparse por la implementación."
   },
   {
-    "question": "¿En qué capa nos centramos al diseñar la aplicación (modelo lógico)?",
+    "question": "¿En qué capa nos centramos al diseñar la aplicación?",
     "options": [
       "Modelo conceptual",
       "Modelo lógico",
