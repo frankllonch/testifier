@@ -268,7 +268,7 @@ export default function App() {
 
       {/* Progress bar */}
       <Box sx={{ height: 20, width: '100%', bgcolor: 'grey.200' }}>
-        <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'secondary.main', transition: 'width 0.2s' }} />
+        <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'yellow', transition: 'width 0.2s' }} />
       </Box>
 
       {/* Next button */}
