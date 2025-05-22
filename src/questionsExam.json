@@ -55,9 +55,9 @@
     },
     {
       "question": "¿Qué es un clúster en big data?",
-      "options": ["Un conjunto de máquinas trabajando juntas", "Una tabla particionada", "Un índice distribuido", "Un tipo de consulta"],
+      "options": ["Un conjunto de datos que comparten tendencias", "Una tabla particionada", "Un índice distribuido", "Un tipo de consulta"],
       "correct": 0,
-      "explanation": "Un clúster agrupa varios servidores para procesar datos de forma distribuida."
+      "explanation": "se refiere a un grupo de datos o puntos que comparten similitudes entre sí y son distintos de otros grupos"
     },
     {
       "question": "¿Qué comando MongoDB inserta múltiples documentos a la vez?",
