@@ -162,12 +162,12 @@ export default function App() {
   return (
     <Box sx={{ width: '100vw', height: '100vh', bgcolor: 'white', display: 'flex', flexDirection: 'column' }}>
       <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Button onClick={() => setPage('start')} color="secondary" sx={{ fontFamily: 'Futura, sans-serif' }}>
+        <Button onClick={() => setPage('start')} color="primary" sx={{ fontFamily: 'Futura, sans-serif' }}>
           Volver al menú
         </Button>
         <FormGroup row>
           <FormControlLabel
-            control={<Switch checked={showImmediate} onChange={(e) => setShowImmediate(e.target.checked)} color="secondary" />}
+            control={<Switch checked={showImmediate} onChange={(e) => setShowImmediate(e.target.checked)} color="primary" />}
             label="Mostrar respuesta inmediata"
             sx={{ fontFamily: 'Futura, sans-serif' }}
           />
@@ -175,8 +175,8 @@ export default function App() {
       </Box>
       <Box
         sx={{
-          position: 'relative',
-          flex: '0 0 50vh',
+          position: 'Relative',
+          flex: '0 0 20vh',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -199,7 +199,7 @@ export default function App() {
             sx={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               border: 5, borderColor: answers[idx] === i ? 'primary.main' : 'grey.100',
-              borderRadius: 5, p: 1, fontFamily: 'Futura, sans-serif', fontSize: '1.5rem',
+              borderRadius: 5, p: 1, fontFamily: 'Futura, sans-serif', fontSize: '2.5rem',
               cursor: answers[idx] == null ? 'pointer' : 'default', pointerEvents: answers[idx] != null ? 'none' : 'auto',
               transition: '0.2s', boxShadow: 10,
               '&:hover': { backgroundColor: 'grey.100', transform: 'scale(1.02)' },
@@ -211,17 +211,17 @@ export default function App() {
         ))}
       </Box>
       {answers[idx] != null && showImmediate && (
-        <Box sx={{ p: 2, fontFamily: 'Futura, sans-serif', fontSize: '1.5rem' }}>
+        <Box sx={{ p: 4, fontFamily: 'Futura, sans-serif', fontSize: '1.75rem' }}>
           {answers[idx] === q.correct
-            ? '✔️ ¡Correcto!'
-            : `❌ Incorrecto. Correcta: ${q.options[q.correct]}`}<Typography sx={{ mt: 1, fontFamily: 'Futura, sans-serif' }}>{q.explanation}</Typography>
+            ? '✔️ ¡No tan tonto!'
+            : `❌ Tonto. Aprende: ${q.options[q.correct]}`}<Typography sx={{ mt: 2, fontFamily: 'Futura, sans-serif', fontSize: '2rem' }}>{q.explanation}</Typography>
         </Box>
       )}
-      <Box sx={{ height: 20, width: '100%', bgcolor: 'grey.200' }}>
+      <Box sx={{ height: 15, width: '100%', bgcolor: 'primary' }}>
         <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'yellow', transition: 'width 0.2s' }} />
       </Box>
       <Box sx={{ p: 2, textAlign: 'center', bgcolor: 'white' }}>
-        <Button variant="contained" onClick={idx < total - 1 ? goNext : finishQuiz} sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'secondary.dark' }, fontFamily: 'Futura, sans-serif', fontSize: '1.25rem', px: 4 }}>
+        <Button variant="contained" onClick={idx < total - 1 ? goNext : finishQuiz} sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' }, fontFamily: 'Futura, sans-serif', fontSize: '1.25rem', px: 4 }}>
           {idx < total - 1 ? 'Siguiente' : 'Finalizar'}
         </Button>
       </Box>
