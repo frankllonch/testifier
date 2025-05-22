@@ -15,6 +15,7 @@ import questionsTema2 from './questionsTema2.json';
 import questionsTema3 from './questionsTema3.json';
 import questionsTema4 from './questionsTema4.json';
 import questionsExam from './questionsExam.json';
+import questionsCode from './questionsCode.json'; // nueva sección code
 import bgStart from './background.png';
 
 const temas = [
@@ -67,6 +68,10 @@ export default function App() {
     setQuestions(questionsExam);
     setPage('quiz');
   };
+  const startCode = () => {
+    setQuestions(questionsCode);
+    setPage('quiz');
+  };
 
   const finishQuiz = () => {
     const total = shuffledQuestions.length;
@@ -96,8 +101,8 @@ export default function App() {
             left: 0,
             width: '100%',
             height: '100%',
-            bgcolor: 'rgba(255,255,255,0.6)',
-            backdropFilter: 'blur(4px)',
+            bgcolor: 'rgba(235,235,235,1)',
+            backdropFilter: 'blur(3px)',
             zIndex: 1
           }
         }}
@@ -108,13 +113,13 @@ export default function App() {
             onClick={() => startQuiz(t.id)}
             sx={{
               fontFamily: 'Futura, sans-serif',
-              fontSize: '8rem',
+              fontSize: '6rem',
               color: 'black',
               cursor: 'pointer',
               userSelect: 'none',
               position: 'relative',
               zIndex: 2,
-              textShadow: '0 2px 4px rgba(0,0,0,0.4)',
+              textShadow: '0 9px 15px rgba(0,0,0,1)',
               transition: '0.2s',
               '&:hover': { color: 'primary.main', transform: 'scale(1.1)' },
               '&:active': { color: 'error.main' }
@@ -127,13 +132,13 @@ export default function App() {
           onClick={startExam}
           sx={{
             fontFamily: 'Futura, sans-serif',
-            fontSize: '8rem',
+            fontSize: '6rem',
             color: 'black',
             cursor: 'pointer',
             userSelect: 'none',
             position: 'relative',
             zIndex: 2,
-            textShadow: '0 2px 4px rgba(0,0,0,0.4)',
+            textShadow: '0 9px 15px rgba(0,0,0,1)',
             transition: '0.2s',
             '&:hover': { color: 'primary.main', transform: 'scale(1.1)' },
             '&:active': { color: 'error.main' }
@@ -141,7 +146,25 @@ export default function App() {
         >
           Examen
         </Typography>
-        <Fab color="error" size="large" onClick={startShuffle} sx={{ position: 'absolute', top: 16, zIndex: 2 }}>
+        <Typography
+          onClick={startCode}
+          sx={{
+            fontFamily: 'Futura, sans-serif',
+            fontSize: '9rem',
+            color: 'black',
+            cursor: 'pointer',
+            userSelect: 'none',
+            position: 'relative',
+            zIndex: 2,
+            textShadow: '0 9px 15px rgba(0,0,0,1)',
+            transition: '0.2s',
+            '&:hover': { color: 'primary.main', transform: 'scale(1.1)' },
+            '&:active': { color: 'error.main' }
+          }}
+        >
+          Code
+        </Typography>
+        <Fab color="primary.dark" size="large" onClick={startShuffle} sx={{ position: 'relative', top: -15, zIndex: 2 }}>
           <ShuffleIcon sx={{ fontSize: 48 }} />
         </Fab>
       </Box>
@@ -160,7 +183,7 @@ export default function App() {
   const goNext = () => { if (idx < total - 1) setIdx(idx + 1); };
 
   return (
-    <Box sx={{ width: '100vw', height: '100vh', bgcolor: 'white', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ width: '100vw', height: '100vh', bgcolor: 'rgba(235,235,235,1)', display: 'flex', flexDirection: 'column' }}>
       <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Button onClick={() => setPage('start')} color="primary" sx={{ fontFamily: 'Futura, sans-serif' }}>
           Volver al menú
@@ -175,7 +198,7 @@ export default function App() {
       </Box>
       <Box
         sx={{
-          position: 'Relative',
+          position: 'relative',
           flex: '0 0 20vh',
           display: 'flex',
           alignItems: 'center',
@@ -184,26 +207,33 @@ export default function App() {
           fontFamily: 'Futura, sans-serif',
           fontSize: '4rem',
           transition: 'color 0.2s',
-          '&:hover': { color: 'primary.main' }
+          '&:hover': { color: 'white' }
         }}
       >
         {`Pregunta ${idx + 1}: ${q.question}`}
         <Box onClick={goPrev} sx={{ position: 'absolute', left: 16, fontSize: '3rem', cursor: idx > 0 ? 'pointer' : 'default', color: idx > 0 ? 'black' : 'grey.400' }}>&#x25C0;</Box>
         <Box onClick={goNext} sx={{ position: 'absolute', right: 16, fontSize: '3rem', cursor: idx < total - 1 ? 'pointer' : 'default', color: idx < total - 1 ? 'black' : 'grey.400' }}>&#x25B6;</Box>
       </Box>
-      <Box sx={{ flex: '1 1 auto', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 2, p: 4 }}>
+      <Box sx={{ flex: '1 1 auto', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 0.4, p: 0 }}>
         {q.options.map((opt, i) => (
           <Box
             key={i}
             onClick={() => handleSelect(i)}
             sx={{
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              border: 5, borderColor: answers[idx] === i ? 'primary.main' : 'grey.100',
-              borderRadius: 5, p: 1, fontFamily: 'Futura, sans-serif', fontSize: '2.5rem',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                border: 3,
+                borderColor: answers[idx] == null
+                  ? 'rgba(235,235,235,1)'
+                  : i === q.correct
+                    ? 'yellow'
+                    : i === answers[idx]
+                      ? 'black'
+                      : 'rgba(235,235,235,1)',
+              borderRadius: 1, p: 1, fontFamily: 'Futura, sans-serif', fontSize: '4rem',
               cursor: answers[idx] == null ? 'pointer' : 'default', pointerEvents: answers[idx] != null ? 'none' : 'auto',
-              transition: '0.2s', boxShadow: 10,
-              '&:hover': { backgroundColor: 'grey.100', transform: 'scale(1.02)' },
-              '&:active': { backgroundColor: 'primary.light', color: 'white' }
+              transition: '0.4s', boxShadow: 2,
+              '&:hover': { backgroundColor: 'rgba(235,235,235,1)', transform: 'scale(1.01)', color: 'primary.main' },
+              '&:active': { backgroundColor: 'primary', color: 'rgba(235,235,235,1)' }
             }}
           >
             {opt}
@@ -220,8 +250,8 @@ export default function App() {
       <Box sx={{ height: 15, width: '100%', bgcolor: 'primary' }}>
         <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'yellow', transition: 'width 0.2s' }} />
       </Box>
-      <Box sx={{ p: 2, textAlign: 'center', bgcolor: 'white' }}>
-        <Button variant="contained" onClick={idx < total - 1 ? goNext : finishQuiz} sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'primary.dark' }, fontFamily: 'Futura, sans-serif', fontSize: '1.25rem', px: 4 }}>
+      <Box sx={{ p: 2, textAlign: 'center', bgcolor: 'rgba(235,235,235,1)' }}>
+        <Button variant="contained" onClick={idx < total - 1 ? goNext : finishQuiz} sx={{ bgcolor: 'rgba(235,235,235,1)', '&:hover': { bgcolor: 'rgba(215,215,215,1)', color:'primary.main' }, fontFamily: 'Futura, sans-serif', fontSize: '2rem',color: 'black', px: 3 }}>
           {idx < total - 1 ? 'Siguiente' : 'Finalizar'}
         </Button>
       </Box>
