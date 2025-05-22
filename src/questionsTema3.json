@@ -1,252 +1,277 @@
 [
-    {
-      "question": "¿Cuál es el objetivo principal del Análisis de Componentes Principales (PCA)?",
-      "options": [
-        "Aumentar el número de variables",
-        "Reducir la dimensionalidad manteniendo la mayor varianza",
-        "Normalizar las variables a escala 0–1",
-        "Construir clusters jerárquicos"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué paso es imprescindible antes de calcular un PCA?",
-      "options": [
-        "Aplicar t-SNE",
-        "Estandarizar (media 0, varianza 1) las variables",
-        "Crear un Data Lake",
-        "Normalizar a escala 0–100"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué matriz se descompone para extraer componentes principales en PCA?",
-      "options": [
-        "Matriz de distancias",
-        "Matriz de correlación o covarianza",
-        "Matriz de confusión",
-        "Matriz de adyacencia"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Cómo se decide cuántos componentes principales conservar?",
-      "options": [
-        "Según el número de filas del dataset",
-        "Con scree plot y reteniendo ~70–80% de varianza",
-        "Por la rapidez de cómputo",
-        "Por número de clusters"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué indica la 'varianza explicada' en PCA?",
-      "options": [
-        "La proporción de ruido en los datos",
-        "El porcentaje de información conservada por cada componente",
-        "La distancia media entre puntos proyectados",
-        "El número de componentes utilizados"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué son las 'cargas factoriales'?",
-      "options": [
-        "Valores de varianza acumulada",
-        "Pesos que indican la contribución de cada variable a un componente",
-        "Número de clusters en K-Means",
-        "Índices de validación de cluster"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué visualización ayuda a elegir el número óptimo de componentes en PCA?",
-      "options": [
-        "Histograma",
-        "Scree plot",
-        "Mapa de calor",
-        "Diagrama de caja"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Para qué sirve un biplot en PCA?",
-      "options": [
-        "Para representar clusters resultantes",
-        "Para mostrar variables y observaciones en el espacio de componentes",
-        "Para ilustrar una regresión lineal",
-        "Para generar un dendrograma"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué característica distingue a t-SNE de PCA?",
-      "options": [
-        "Optimiza la varianza global",
-        "Preserva relaciones locales y clusters",
-        "Es supervisado",
-        "Solo funciona con datos binarios"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Cuál es el parámetro 'perplexity' en t-SNE?",
-      "options": [
-        "Número de componentes de salida",
-        "Tasa de aprendizaje",
-        "Balance entre relaciones locales y globales",
-        "Número de iteraciones"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Por qué se estandarizan los datos antes de t-SNE?",
-      "options": [
-        "Para reducir ruido",
-        "Para que la métrica de distancia sea consistente",
-        "Porque t-SNE falla con datos enteros",
-        "Para acelerar el algoritmo"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué métrica de distancia se puede usar en t-SNE?",
-      "options": [
-        "Euclídea, coseno, correlación…",
-        "Solo Manhattan",
-        "Solo Jaccard",
-        "Solo Hamming"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué técnica es supervisada y busca maximizar la separabilidad entre clases?",
-      "options": [
-        "PCA",
-        "t-SNE",
-        "LDA",
-        "DBSCAN"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué matrices se calculan en LDA para medir dispersión intra- y extra-clase?",
-      "options": [
-        "Covarianza y correlación",
-        "SW (intra-clase) y SB (inter-clase)",
-        "Matriz de confusión",
-        "Matriz de adyacencia"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué hiperparámetro de LDA define cuántas dimensiones de salida tendrá?",
-      "options": [
-        "solver",
-        "shrinkage",
-        "n_components",
-        "tol"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Cuál es la principal diferencia entre PCA y LDA?",
-      "options": [
-        "PCA es supervisado y LDA no supervisado",
-        "Ambos son no supervisados",
-        "PCA maximiza varianza; LDA maximiza separabilidad de clases",
-        "LDA no requiere estandarización"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué algoritmo agrupa datos minimizando la suma de distancias al cuadrado a centroides?",
-      "options": [
-        "K-Means",
-        "DBSCAN",
-        "PCA",
-        "t-SNE"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Cuál es la métrica interna de calidad que usa K-Means para evaluar clusters?",
-      "options": [
-        "Silhouette",
-        "Inercia (WCSS)",
-        "P-valor",
-        "Varianza explicada"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué método ayuda a determinar el número óptimo de clusters en K-Means?",
-      "options": [
-        "Método del codo (elbow)",
-        "Scree plot",
-        "Mapa de calor",
-        "Biplot"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué parámetro de K-Means controla la inicialización de centroides?",
-      "options": [
-        "n_init",
-        "init",
-        "max_iter",
-        "tol"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué algoritmo de clustering basa su criterio en densidad de puntos?",
-      "options": [
-        "K-Means",
-        "LDA",
-        "DBSCAN",
-        "PCA"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué define un 'punto núcleo' en DBSCAN?",
-      "options": [
-        "Punto con al menos min_samples en su vecindario",
-        "Punto aleatorio",
-        "Punto más alejado",
-        "Punto con valor NULL"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué parámetro eps controla en DBSCAN?",
-      "options": [
-        "Tamaño mínimo de cluster",
-        "Distancia máxima para vecino",
-        "Número de clusters",
-        "Tasa de aprendizaje"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué sucede con un punto que no es núcleo ni frontera en DBSCAN?",
-      "options": [
-        "Se convierte en nuevo cluster",
-        "Se ignora como ruido",
-        "Se une al cluster más cercano",
-        "Se proyecta en PCA"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué medida evalúa qué tan bien separados están los clusters en DBSCAN?",
-      "options": [
-        "Inercia",
-        "Davies–Bouldin Index",
-        "Varianza explicada",
-        "Perplexity"
-      ],
-      "correct": 1
-    }
-  ]
+  {
+    "question": "¿Cuál es el objetivo principal del Análisis de Componentes Principales (PCA)?",
+    "options": [
+      "Aumentar el número de variables",
+      "Reducir la dimensionalidad manteniendo la mayor varianza",
+      "Normalizar las variables a escala 0–1",
+      "Construir clusters jerárquicos"
+    ],
+    "correct": 1,
+    "explanation": "PCA busca representar los datos en menos dimensiones sin perder la mayor parte de la varianza."
+  },
+  {
+    "question": "¿Qué paso es imprescindible antes de calcular un PCA?",
+    "options": [
+      "Aplicar t-SNE",
+      "Estandarizar (media 0, varianza 1) las variables",
+      "Crear un Data Lake",
+      "Normalizar a escala 0–100"
+    ],
+    "correct": 1,
+    "explanation": "La estandarización evita que variables con diferente escala dominen los componentes."
+  },
+  {
+    "question": "¿Qué matriz se descompone para extraer componentes principales en PCA?",
+    "options": [
+      "Matriz de distancias",
+      "Matriz de correlación o covarianza",
+      "Matriz de confusión",
+      "Matriz de adyacencia"
+    ],
+    "correct": 1,
+    "explanation": "Se descompone la matriz de covarianza o correlación para hallar los vectores propios."
+  },
+  {
+    "question": "¿Cómo se decide cuántos componentes principales conservar?",
+    "options": [
+      "Según el número de filas del dataset",
+      "Con scree plot y reteniendo ~70–80% de varianza",
+      "Por la rapidez de cómputo",
+      "Por número de clusters"
+    ],
+    "correct": 1,
+    "explanation": "Un scree plot muestra la varianza explicada por componente y ayuda a elegir un umbral."
+  },
+  {
+    "question": "¿Qué indica la 'varianza explicada' en PCA?",
+    "options": [
+      "La proporción de ruido en los datos",
+      "El porcentaje de información conservada por cada componente",
+      "La distancia media entre puntos proyectados",
+      "El número de componentes utilizados"
+    ],
+    "correct": 1,
+    "explanation": "Mide cuánto de la variabilidad total capturan los componentes retenidos."
+  },
+  {
+    "question": "¿Qué son las 'cargas factoriales'?",
+    "options": [
+      "Valores de varianza acumulada",
+      "Pesos que indican la contribución de cada variable a un componente",
+      "Número de clusters en K-Means",
+      "Índices de validación de cluster"
+    ],
+    "correct": 1,
+    "explanation": "Las cargas factoriales muestran la influencia de cada variable en el componente."
+  },
+  {
+    "question": "¿Qué visualización ayuda a elegir el número óptimo de componentes en PCA?",
+    "options": [
+      "Histograma",
+      "Scree plot",
+      "Mapa de calor",
+      "Diagrama de caja"
+    ],
+    "correct": 1,
+    "explanation": "El scree plot ordena componentes por varianza explicada y revela puntos de inflexión."
+  },
+  {
+    "question": "¿Para qué sirve un biplot en PCA?",
+    "options": [
+      "Para representar clusters resultantes",
+      "Para mostrar variables y observaciones en el espacio de componentes",
+      "Para ilustrar una regresión lineal",
+      "Para generar un dendrograma"
+    ],
+    "correct": 1,
+    "explanation": "Un biplot combina puntos y vectores de variables en el nuevo espacio de componentes."
+  },
+  {
+    "question": "¿Qué característica distingue a t-SNE de PCA?",
+    "options": [
+      "Optimiza la varianza global",
+      "Preserva relaciones locales y clusters",
+      "Es supervisado",
+      "Solo funciona con datos binarios"
+    ],
+    "correct": 1,
+    "explanation": "t-SNE enfatiza la preservación de distancias locales para visualizar clusters."
+  },
+  {
+    "question": "¿Cuál es el parámetro 'perplexity' en t-SNE?",
+    "options": [
+      "Número de componentes de salida",
+      "Tasa de aprendizaje",
+      "Balance entre relaciones locales y globales",
+      "Número de iteraciones"
+    ],
+    "correct": 2,
+    "explanation": "Perplexity controla cuántos vecinos influyen en la probabilidad conjunta."
+  },
+  {
+    "question": "¿Por qué se estandarizan los datos antes de t-SNE?",
+    "options": [
+      "Para reducir ruido",
+      "Para que la métrica de distancia sea consistente",
+      "Porque t-SNE falla con datos enteros",
+      "Para acelerar el algoritmo"
+    ],
+    "correct": 1,
+    "explanation": "La estandarización evita que variables con mayor escala dominen la distancia."
+  },
+  {
+    "question": "¿Qué métrica de distancia se puede usar en t-SNE?",
+    "options": [
+      "Euclídea, coseno, correlación…",
+      "Solo Manhattan",
+      "Solo Jaccard",
+      "Solo Hamming"
+    ],
+    "correct": 0,
+    "explanation": "t-SNE admite múltiples métricas como euclídea o coseno según el dominio."
+  },
+  {
+    "question": "¿Qué técnica es supervisada y busca maximizar la separabilidad entre clases?",
+    "options": [
+      "PCA",
+      "t-SNE",
+      "LDA",
+      "DBSCAN"
+    ],
+    "correct": 2,
+    "explanation": "LDA usa etiquetas de clase para hallar proyecciones que separan mejor grupos."
+  },
+  {
+    "question": "¿Qué matrices se calculan en LDA para medir dispersión intra- y extra-clase?",
+    "options": [
+      "Covarianza y correlación",
+      "SW (intra-clase) y SB (inter-clase)",
+      "Matriz de confusión",
+      "Matriz de adyacencia"
+    ],
+    "correct": 1,
+    "explanation": "SW evalúa dispersión interna y SB la dispersión entre centros de clase."
+  },
+  {
+    "question": "¿Qué hiperparámetro de LDA define cuántas dimensiones de salida tendrá?",
+    "options": [
+      "solver",
+      "shrinkage",
+      "n_components",
+      "tol"
+    ],
+    "correct": 2,
+    "explanation": "n_components indica el número de proyecciones lineales finales en LDA."
+  },
+  {
+    "question": "¿Cuál es la principal diferencia entre PCA y LDA?",
+    "options": [
+      "PCA es supervisado y LDA no supervisado",
+      "Ambos son no supervisados",
+      "PCA maximiza varianza; LDA maximiza separabilidad de clases",
+      "LDA no requiere estandarización"
+    ],
+    "correct": 2,
+    "explanation": "PCA no usa etiquetas; LDA busca maximizar distancia entre clases."
+  },
+  {
+    "question": "¿Qué algoritmo agrupa datos minimizando la suma de distancias al cuadrado a centroides?",
+    "options": [
+      "K-Means",
+      "DBSCAN",
+      "PCA",
+      "t-SNE"
+    ],
+    "correct": 0,
+    "explanation": "K-Means ajusta centroides para minimizar la varianza dentro de cada cluster."
+  },
+  {
+    "question": "¿Cuál es la métrica interna de calidad que usa K-Means para evaluar clusters?",
+    "options": [
+      "Silhouette",
+      "Inercia (WCSS)",
+      "P-valor",
+      "Varianza explicada"
+    ],
+    "correct": 1,
+    "explanation": "La inercia (WCSS) mide la suma de distancias al cuadrado de cada punto a su centroide."
+  },
+  {
+    "question": "¿Qué método ayuda a determinar el número óptimo de clusters en K-Means?",
+    "options": [
+      "Método del codo (elbow)",
+      "Scree plot",
+      "Mapa de calor",
+      "Biplot"
+    ],
+    "correct": 0,
+    "explanation": "El elbow busca el punto donde añadir clusters no reduce mucho la inercia."
+  },
+  {
+    "question": "¿Qué parámetro de K-Means controla la inicialización de centroides?",
+    "options": [
+      "n_init",
+      "init",
+      "max_iter",
+      "tol"
+    ],
+    "correct": 1,
+    "explanation": "init define la estrategia de inicialización (por ejemplo, 'k-means++')."
+  },
+  {
+    "question": "¿Qué algoritmo de clustering basa su criterio en densidad de puntos?",
+    "options": [
+      "K-Means",
+      "LDA",
+      "DBSCAN",
+      "PCA"
+    ],
+    "correct": 2,
+    "explanation": "DBSCAN agrupa según densidad, identificando núcleos y puntos ruido."
+  },
+  {
+    "question": "¿Qué define un 'punto núcleo' en DBSCAN?",
+    "options": [
+      "Punto con al menos min_samples en su vecindario",
+      "Punto aleatorio",
+      "Punto más alejado",
+      "Punto con valor NULL"
+    ],
+    "correct": 0,
+    "explanation": "Un punto núcleo tiene suficientes vecinos dentro de eps para formar un cluster."
+  },
+  {
+    "question": "¿Qué parámetro eps controla en DBSCAN?",
+    "options": [
+      "Tamaño mínimo de cluster",
+      "Distancia máxima para vecino",
+      "Número de clusters",
+      "Tasa de aprendizaje"
+    ],
+    "correct": 1,
+    "explanation": "eps establece el radio máximo para considerar vecinos en la densidad."
+  },
+  {
+    "question": "¿Qué sucede con un punto que no es núcleo ni frontera en DBSCAN?",
+    "options": [
+      "Se convierte en nuevo cluster",
+      "Se ignora como ruido",
+      "Se une al cluster más cercano",
+      "Se proyecta en PCA"
+    ],
+    "correct": 1,
+    "explanation": "Es marcado como ruido porque no cumple con densidad mínima ni frontera."
+  },
+  {
+    "question": "¿Qué medida evalúa qué tan bien separados están los clusters en DBSCAN?",
+    "options": [
+      "Inercia",
+      "Davies–Bouldin Index",
+      "Varianza explicada",
+      "Perplexity"
+    ],
+    "correct": 1,
+    "explanation": "El índice Davies–Bouldin compara la distancia entre y dentro de los clusters."
+  }
+]

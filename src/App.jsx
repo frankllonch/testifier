@@ -25,20 +25,41 @@ const temas = [
 ];
 
 export default function App() {
-  const [page, setPage] = useState('start');
-  const [questions, setQuestions] = useState([]);
-  const [idx, setIdx] = useState(0);
-  const [answers, setAnswers] = useState([]);
+  const [page, setPage] = useState('start');           // 'start' or 'quiz'
+  const [questions, setQuestions] = useState([]);      // raw questions array
+  const [shuffledQuestions, setShuffledQuestions] = useState([]); // with options shuffled
+  const [idx, setIdx] = useState(0);                   // current question index
+  const [answers, setAnswers] = useState([]);          // user answers
   const [showImmediate, setShowImmediate] = useState(true);
   const [examMode, setExamMode] = useState(false);
 
+  // Whenever questions change, shuffle options for each question
   useEffect(() => {
-    if (questions.length) {
-      setIdx(0);
-      setAnswers(Array(questions.length).fill(null));
-    }
+    if (!questions.length) return;
+    const sq = questions.map((q) => {
+      const order = q.options.map((_, i) => i);
+      // Shuffle order
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      // Build new options array
+      const newOptions = order.map((i) => q.options[i]);
+      // Find new index of correct answer
+      const newCorrect = order.findIndex((i) => i === q.correct);
+      return {
+        question: q.question,
+        options: newOptions,
+        correct: newCorrect,
+        explanation: q.explanation
+      };
+    });
+    setShuffledQuestions(sq);
+    setIdx(0);
+    setAnswers(Array(sq.length).fill(null));
   }, [questions]);
 
+  // Start a tema quiz
   const startQuiz = (temaId) => {
     const tema = temas.find((t) => t.id === temaId);
     setExamMode(false);
@@ -46,6 +67,7 @@ export default function App() {
     setPage('quiz');
   };
 
+  // Shuffle mode: mix all temas
   const startShuffle = () => {
     const all = temas.flatMap((t) => t.questions);
     for (let i = all.length - 1; i > 0; i--) {
@@ -57,12 +79,14 @@ export default function App() {
     setPage('quiz');
   };
 
+  // Exam mode: use custom 30 questions
   const startExam = () => {
     setExamMode(true);
     setQuestions(questionsExam);
     setPage('quiz');
   };
 
+  // START PAGE
   if (page === 'start') {
     return (
       <Box
@@ -144,8 +168,9 @@ export default function App() {
     );
   }
 
-  const q = questions[idx];
-  const total = questions.length;
+  // QUIZ PAGE
+  const total = shuffledQuestions.length;
+  const q = shuffledQuestions[idx] || { options: [], question: '' };
   const progress = ((idx + 1) / total) * 100;
 
   const handleSelect = (i) => {
@@ -160,7 +185,7 @@ export default function App() {
     if (idx < total - 1) {
       setIdx(idx + 1);
     } else {
-      const score = answers.filter((v, i) => v === questions[i].correct).length;
+      const score = answers.filter((v, i) => v === shuffledQuestions[i].correct).length;
       alert(`Resultados: ${score} de ${total}`);
       setPage('start');
     }
@@ -168,6 +193,7 @@ export default function App() {
 
   return (
     <Box sx={{ width: '100vw', height: '100vh', bgcolor: 'white', display: 'flex', flexDirection: 'column' }}>
+      {/* Header */}
       <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Button onClick={() => setPage('start')} sx={{ fontFamily: 'Futura, sans-serif' }}>
           Volver al menú
@@ -181,6 +207,7 @@ export default function App() {
         </FormGroup>
       </Box>
 
+      {/* Question */}
       <Box
         sx={{
           flex: '0 0 50vh',
@@ -197,6 +224,7 @@ export default function App() {
         {`Pregunta ${idx + 1}: ${q.question}`}
       </Box>
 
+      {/* Answers grid */}
       <Box sx={{ flex: '1 1 auto', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 2, p: 4 }}>
         {q.options.map((opt, i) => (
           <Box
@@ -206,15 +234,15 @@ export default function App() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              border: 1,
-              borderColor: answers[idx] === i ? 'primary.main' : 'grey.300',
+              border: 5,
+              borderColor: answers[idx] === i ? 'primary.main' : 'grey.100',
               borderRadius: 2,
               p: 2,
               fontFamily: 'Futura, sans-serif',
               fontSize: '1.5rem',
               cursor: 'pointer',
               transition: 'all 0.2s',
-              boxShadow: 1,
+              boxShadow: 10,
               '&:hover': { backgroundColor: 'grey.100', transform: 'scale(1.02)' },
               '&:active': { backgroundColor: 'primary.light', color: 'white' }
             }}
@@ -224,20 +252,27 @@ export default function App() {
         ))}
       </Box>
 
-      {answers[idx] != null && (
+      {/* Immediate feedback & explanation */}
+      {answers[idx] != null && showImmediate && (
         <Box sx={{ p: 2, fontFamily: 'Futura, sans-serif', fontSize: '1.5rem' }}>
-          {showImmediate && (answers[idx] === q.correct ? '✔️ ¡Correcto!' : `❌ Incorrecto. Correcta: ${q.options[q.correct]}`)}
-          {examMode && (
-            <Typography sx={{ mt: 1, fontFamily: 'Futura, sans-serif' }}>{q.explanation}</Typography>
+          {answers[idx] === q.correct
+            ? '✔️ ¡Correcto!'
+            : `❌ Incorrecto. Correcta: ${q.options[q.correct]}`}
+          {q.explanation && (
+            <Typography sx={{ mt: 1, fontFamily: 'Futura, sans-serif' }}>
+              {q.explanation}
+            </Typography>
           )}
         </Box>
       )}
 
-      <Box sx={{ height: 8, width: '100%', bgcolor: 'grey.200' }}>
-        <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'primary.main', transition: 'width 0.2s' }} />
+      {/* Progress bar */}
+      <Box sx={{ height: 20, width: '100%', bgcolor: 'grey.200' }}>
+        <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'secondary.main', transition: 'width 0.2s' }} />
       </Box>
 
-      <Box sx={{ p: 2, textAlign: 'center' }}>
+      {/* Next button */}
+      <Box sx={{ p: 2, textAlign: 'center' ,bgcolor: ''}}>
         <Button
           variant="contained"
           onClick={next}

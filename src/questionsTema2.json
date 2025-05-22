@@ -1,302 +1,431 @@
 [
-    {
-      "question": "¿Qué es el modelado de datos?",
-      "options": [
-        "Un enfoque estructurado para identificar y analizar componentes de datos",
-        "Un proceso de limpieza de datos",
-        "Un tipo de base de datos",
-        "Una técnica de visualización"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Cuál es la función principal del modelo conceptual de datos?",
-      "options": [
-        "Comunicar la visión empresarial de alto nivel",
-        "Implementar tablas y columnas físicas",
-        "Optimizar consultas OLAP",
-        "Definir claves primarias"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿En qué capa nos centramos al diseñar la aplicación (modelo lógico)?",
-      "options": [
-        "Modelo conceptual",
-        "Modelo lógico",
-        "Modelo físico",
-        "Modelo dimensional"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué describe el modelo de datos físico?",
-      "options": [
-        "Cómo se implementarán los datos en la base de datos",
-        "La visión de negocio de la empresa",
-        "Las reglas de negocio",
-        "La estructura de almacenamiento en la nube"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué técnica de modelado lógico representa entidades, atributos y relaciones?",
-      "options": [
-        "Modelo dimensional",
-        "Modelo entidad-relación (ER)",
-        "Modelo de cubo OLAP",
-        "Modelo en copo de nieve"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Cuál de las siguientes NO es característica del modelo ER?",
-      "options": [
-        "Uso de claves primarias y foráneas",
-        "Normalización para minimizar redundancias",
-        "Estructura basada en hechos y dimensiones",
-        "Alta cantidad de tablas y relaciones complejas"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué representa una entidad en el modelo ER?",
-      "options": [
-        "Un objeto del mundo real sobre el que almacenamos información",
-        "Un atributo derivado",
-        "Una tabla de hechos",
-        "Una consulta OLAP"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué nombre recibe un atributo que se puede dividir en subpartes?",
-      "options": [
-        "Atributo compuesto",
-        "Atributo simple",
-        "Atributo clave",
-        "Atributo derivado"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué es un atributo derivado?",
-      "options": [
-        "Un atributo que se obtiene de otros atributos",
-        "Un atributo que identifica la entidad",
-        "Un atributo que no puede dividirse",
-        "Un atributo compuesto"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué tipo de relación es 1:1 (uno a uno)?",
-      "options": [
-        "Una entidad se relaciona con muchas del otro lado",
-        "Cada entidad en un conjunto se relaciona con solo una del otro",
-        "Muchas entidades se relacionan con una sola",
-        "Muchas entidades con muchas"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué tipo de relación es 1:M (uno a muchos)?",
-      "options": [
-        "Un cliente puede hacer muchos pedidos",
-        "Un pedido pertenece a un cliente",
-        "Un pasaporte pertenece a una persona",
-        "Un estudiante puede inscribirse en varios cursos"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Cómo se denomina la relación M:N (muchos a muchos)?",
-      "options": [
-        "Una dimensión y hechos",
-        "Muchas entidades se relacionan con muchas",
-        "Una entidad se relaciona con una",
-        "Una tabla denormalizada"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Cuál es el objetivo principal de la normalización en ER?",
-      "options": [
-        "Aumentar la redundancia",
-        "Mejorar el rendimiento OLAP",
-        "Minimizar la redundancia de datos",
-        "Crear cubos de datos"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué técnica está diseñada para BI y Data Warehousing?",
-      "options": [
-        "Modelo ER",
-        "Modelo conceptual",
-        "Modelo dimensional",
-        "Modelo relacional"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "En el modelo dimensional, ¿qué tabla contiene datos cuantificables?",
-      "options": [
-        "Tabla de dimensiones",
-        "Tabla de hechos",
-        "Staging Area",
-        "Data Mart"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué tabla del modelo dimensional ofrece contexto para el análisis?",
-      "options": [
-        "Tabla de hechos",
-        "Tabla de atributos",
-        "Tabla de dimensiones",
-        "Tabla relacional"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué técnica sacrifica la normalización para optimizar consultas?",
-      "options": [
-        "Normalización en copo de nieve",
-        "Desnormalización controlada",
-        "Modelo ER puro",
-        "1NF"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué es la Integridad Referencial?",
-      "options": [
-        "Principio que garantiza coherencia de relaciones entre tablas",
-        "Proceso de limpieza de datos",
-        "Modelo dimensional",
-        "Esquema en estrella"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué restricción elimina registros relacionados automáticamente?",
-      "options": [
-        "RESTRICT",
-        "SET NULL",
-        "CASCADE",
-        "NO ACTION"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué acción realiza la restricción SET NULL?",
-      "options": [
-        "Elimina registro padre y los hijos",
-        "Bloquea la eliminación si hay referencias",
-        "Establece la FK a NULL al eliminar el padre",
-        "Niega la existencia de FK"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué hace la restricción RESTRICT (NO ACTION)?",
-      "options": [
-        "Elimina en cascada registros hijos",
-        "Impide eliminar si existen referencias",
-        "Establece la FK a NULL",
-        "Desnormaliza datos"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué busca la Primera Forma Normal (1NF)?",
-      "options": [
-        "Eliminar dependencias transitivas",
-        "Garantizar valores atómicos en cada celda",
-        "Optimizar consultas OLAP",
-        "Combinar tablas en una sola"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué requiere la Segunda Forma Normal (2NF)?",
-      "options": [
-        "Eliminar grupos repetidos",
-        "Cada atributo dependa de toda clave primaria",
-        "Eliminar dependencias transitivas",
-        "Crear cubos multidimensionales"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Cuál es el propósito de la Tercera Forma Normal (3NF)?",
-      "options": [
-        "Eliminar dependencias transitivas entre atributos no clave",
-        "Crear Data Marts",
-        "Establecer claves foráneas",
-        "Optimizar almacenamiento"
-      ],
-      "correct": 0
-    },
-    {
-      "question": "¿Qué es un Data Warehouse?",
-      "options": [
-        "Un subconjunto de un Data Mart",
-        "Un sistema centralizado para almacenar datos históricos de múltiples fuentes",
-        "Un modelo ER",
-        "Una consulta OLAP"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué es un Data Mart?",
-      "options": [
-        "Un almacén centralizado para todos los datos",
-        "Un subconjunto de un DW orientado a un área funcional",
-        "Un modelo lógico de datos",
-        "Una restricción de base de datos"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Cuál es la función de la Staging Area en un DW?",
-      "options": [
-        "Almacenar datos finales para reporting",
-        "Capa temporal para extraer, limpiar y transformar datos",
-        "Esquema en estrella",
-        "Tabla de dimensiones"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué operación OLAP implica desglose en niveles más detallados?",
-      "options": [
-        "Roll-Up",
-        "Slice & Dice",
-        "Drill-Down",
-        "Extract"
-      ],
-      "correct": 2
-    },
-    {
-      "question": "¿Qué operación OLAP agrega datos para una visión general?",
-      "options": [
-        "Drill-Down",
-        "Roll-Up",
-        "Slice & Dice",
-        "Transform"
-      ],
-      "correct": 1
-    },
-    {
-      "question": "¿Qué operación OLAP permite filtrar y reorganizar datos?",
-      "options": [
-        "Slice & Dice",
-        "Drill-Down",
-        "Normalize",
-        "Cascade"
-      ],
-      "correct": 0
-    }
-  ]
+  {
+    "question": "¿Qué es el modelado de datos?",
+    "options": [
+      "Un enfoque estructurado para identificar y analizar componentes de datos",
+      "Un proceso de limpieza de datos",
+      "Un tipo de base de datos",
+      "Una técnica de visualización"
+    ],
+    "correct": 0,
+    "explanation": "El modelado de datos define de forma estructurada las entidades, atributos y relaciones para reflejar los requisitos de información."
+  },
+  {
+    "question": "¿Cuál es la función principal del modelo conceptual de datos?",
+    "options": [
+      "Comunicar la visión empresarial de alto nivel",
+      "Implementar tablas y columnas físicas",
+      "Optimizar consultas OLAP",
+      "Definir claves primarias"
+    ],
+    "correct": 0,
+    "explanation": "El modelo conceptual representa de forma abstracta los elementos de negocio y sus relaciones sin preocuparse por la implementación."
+  },
+  {
+    "question": "¿En qué capa nos centramos al diseñar la aplicación (modelo lógico)?",
+    "options": [
+      "Modelo conceptual",
+      "Modelo lógico",
+      "Modelo físico",
+      "Modelo dimensional"
+    ],
+    "correct": 1,
+    "explanation": "El modelo lógico traduce el conceptual a estructuras de tablas y relaciones sin detalles de almacenamiento físico."
+  },
+  {
+    "question": "¿Qué describe el modelo de datos físico?",
+    "options": [
+      "Cómo se implementarán los datos en la base de datos",
+      "La visión de negocio de la empresa",
+      "Las reglas de negocio",
+      "La estructura de almacenamiento en la nube"
+    ],
+    "correct": 0,
+    "explanation": "El modelo físico incluye detalles como tablas, índices, tipos de datos y almacenamiento específico."
+  },
+  {
+    "question": "¿Qué técnica de modelado lógico representa entidades, atributos y relaciones?",
+    "options": [
+      "Modelo dimensional",
+      "Modelo entidad-relación (ER)",
+      "Modelo de cubo OLAP",
+      "Modelo en copo de nieve"
+    ],
+    "correct": 1,
+    "explanation": "El diagrama ER utiliza rectángulos para entidades, elipses para atributos y rombos para relaciones."
+  },
+  {
+    "question": "¿Cuál de las siguientes NO es característica del modelo ER?",
+    "options": [
+      "Uso de claves primarias y foráneas",
+      "Normalización para minimizar redundancias",
+      "Estructura basada en hechos y dimensiones",
+      "Alta cantidad de tablas y relaciones complejas"
+    ],
+    "correct": 2,
+    "explanation": "La estructura de hechos y dimensiones corresponde al modelo dimensional, no al ER tradicional."
+  },
+  {
+    "question": "¿Qué representa una entidad en el modelo ER?",
+    "options": [
+      "Un objeto del mundo real sobre el que almacenamos información",
+      "Un atributo derivado",
+      "Una tabla de hechos",
+      "Una consulta OLAP"
+    ],
+    "correct": 0,
+    "explanation": "Una entidad es un objeto o concepto real (por ejemplo, Cliente o Producto) del cual se guardan datos."
+  },
+  {
+    "question": "¿Qué nombre recibe un atributo que se puede dividir en subpartes?",
+    "options": [
+      "Atributo compuesto",
+      "Atributo simple",
+      "Atributo clave",
+      "Atributo derivado"
+    ],
+    "correct": 0,
+    "explanation": "Un atributo compuesto, como 'Dirección', se divide en calle, ciudad y código postal."
+  },
+  {
+    "question": "¿Qué es un atributo derivado?",
+    "options": [
+      "Un atributo que se obtiene de otros atributos",
+      "Un atributo que identifica la entidad",
+      "Un atributo que no puede dividirse",
+      "Un atributo compuesto"
+    ],
+    "correct": 0,
+    "explanation": "Un atributo derivado como 'Edad' se calcula a partir de la fecha de nacimiento."
+  },
+  {
+    "question": "¿Qué tipo de relación es 1:1 (uno a uno)?",
+    "options": [
+      "Una entidad se relaciona con muchas del otro lado",
+      "Cada entidad en un conjunto se relaciona con solo una del otro",
+      "Muchas entidades se relacionan con una sola",
+      "Muchas entidades con muchas"
+    ],
+    "correct": 1,
+    "explanation": "En 1:1 cada registro de una tabla se vincula con uno y solo un registro de la otra."
+  },
+  {
+    "question": "¿Qué tipo de relación es 1:M (uno a muchos)?",
+    "options": [
+      "Un cliente puede hacer muchos pedidos",
+      "Un pedido pertenece a un cliente",
+      "Un pasaporte pertenece a una persona",
+      "Un estudiante puede inscribirse en varios cursos"
+    ],
+    "correct": 0,
+    "explanation": "En 1:M un registro padre (Cliente) se asocia con múltiples registros hijos (Pedidos)."
+  },
+  {
+    "question": "¿Cómo se denomina la relación M:N (muchos a muchos)?",
+    "options": [
+      "Una dimensión y hechos",
+      "Muchas entidades se relacionan con muchas",
+      "Una entidad se relaciona con una",
+      "Una tabla denormalizada"
+    ],
+    "correct": 1,
+    "explanation": "En M:N múltiples registros de cada entidad pueden asociarse entre sí."
+  },
+  {
+    "question": "¿Cuál es el objetivo principal de la normalización en ER?",
+    "options": [
+      "Aumentar la redundancia",
+      "Mejorar el rendimiento OLAP",
+      "Minimizar la redundancia de datos",
+      "Crear cubos de datos"
+    ],
+    "correct": 2,
+    "explanation": "La normalización organiza datos para evitar duplicaciones y mantener integridad."
+  },
+  {
+    "question": "¿Qué técnica está diseñada para BI y Data Warehousing?",
+    "options": [
+      "Modelo ER",
+      "Modelo conceptual",
+      "Modelo dimensional",
+      "Modelo relacional"
+    ],
+    "correct": 2,
+    "explanation": "El modelo dimensional optimiza consultas analíticas usando hechos y dimensiones."
+  },
+  {
+    "question": "En el modelo dimensional, ¿qué tabla contiene datos cuantificables?",
+    "options": [
+      "Tabla de dimensiones",
+      "Tabla de hechos",
+      "Staging Area",
+      "Data Mart"
+    ],
+    "correct": 1,
+    "explanation": "La tabla de hechos almacena medidas numéricas, como ventas o ingresos."
+  },
+  {
+    "question": "¿Qué tabla del modelo dimensional ofrece contexto para el análisis?",
+    "options": [
+      "Tabla de hechos",
+      "Tabla de atributos",
+      "Tabla de dimensiones",
+      "Tabla relacional"
+    ],
+    "correct": 2,
+    "explanation": "Las dimensiones describen atributos de los hechos, como fecha, producto o región."
+  },
+  {
+    "question": "¿Qué técnica sacrifica la normalización para optimizar consultas?",
+    "options": [
+      "Normalización en copo de nieve",
+      "Desnormalización controlada",
+      "Modelo ER puro",
+      "1NF"
+    ],
+    "correct": 1,
+    "explanation": "La desnormalización duplica algunos datos para acelerar lecturas en entornos analíticos."
+  },
+  {
+    "question": "¿Qué es la Integridad Referencial?",
+    "options": [
+      "Principio que garantiza coherencia de relaciones entre tablas",
+      "Proceso de limpieza de datos",
+      "Modelo dimensional",
+      "Esquema en estrella"
+    ],
+    "correct": 0,
+    "explanation": "Garantiza que las claves foráneas apunten siempre a claves primarias existentes."
+  },
+  {
+    "question": "¿Qué restricción elimina registros relacionados automáticamente?",
+    "options": [
+      "RESTRICT",
+      "SET NULL",
+      "CASCADE",
+      "NO ACTION"
+    ],
+    "correct": 2,
+    "explanation": "CASCADE borra en cascada los registros hijos al eliminar el padre."
+  },
+  {
+    "question": "¿Qué acción realiza la restricción SET NULL?",
+    "options": [
+      "Elimina registro padre y los hijos",
+      "Bloquea la eliminación si hay referencias",
+      "Establece la FK a NULL al eliminar el padre",
+      "Niega la existencia de FK"
+    ],
+    "correct": 2,
+    "explanation": "SET NULL pone la clave foránea a NULL cuando se elimina el registro relacionado."
+  },
+  {
+    "question": "¿Qué hace la restricción RESTRICT (NO ACTION)?",
+    "options": [
+      "Elimina en cascada registros hijos",
+      "Impide eliminar si existen referencias",
+      "Establece la FK a NULL",
+      "Desnormaliza datos"
+    ],
+    "correct": 1,
+    "explanation": "RESTRICT bloquea la eliminación si hay claves foráneas que lo referencian."
+  },
+  {
+    "question": "¿Qué busca la Primera Forma Normal (1NF)?",
+    "options": [
+      "Eliminar dependencias transitivas",
+      "Garantizar valores atómicos en cada celda",
+      "Optimizar consultas OLAP",
+      "Combinar tablas en una sola"
+    ],
+    "correct": 1,
+    "explanation": "1NF requiere que cada columna contenga un único valor indivisible."
+  },
+  {
+    "question": "¿Qué requiere la Segunda Forma Normal (2NF)?",
+    "options": [
+      "Eliminar grupos repetidos",
+      "Cada atributo dependa de toda clave primaria",
+      "Eliminar dependencias transitivas",
+      "Crear cubos multidimensionales"
+    ],
+    "correct": 1,
+    "explanation": "2NF exige que los atributos no clave dependan completamente de la clave primaria."
+  },
+  {
+    "question": "¿Cuál es el propósito de la Tercera Forma Normal (3NF)?",
+    "options": [
+      "Eliminar dependencias transitivas entre atributos no clave",
+      "Crear Data Marts",
+      "Establecer claves foráneas",
+      "Optimizar almacenamiento"
+    ],
+    "correct": 0,
+    "explanation": "3NF elimina dependencias de atributos no clave entre sí para mayor consistencia."
+  },
+  {
+    "question": "¿Qué es un Data Warehouse?",
+    "options": [
+      "Un subconjunto de un Data Mart",
+      "Un sistema centralizado para almacenar datos históricos de múltiples fuentes",
+      "Un modelo ER",
+      "Una consulta OLAP"
+    ],
+    "correct": 1,
+    "explanation": "Un DW consolida datos históricos de varias fuentes para análisis y reporting."
+  },
+  {
+    "question": "¿Qué es un Data Mart?",
+    "options": [
+      "Un almacén centralizado para todos los datos",
+      "Un subconjunto de un DW orientado a un área funcional",
+      "Un modelo lógico de datos",
+      "Una restricción de base de datos"
+    ],
+    "correct": 1,
+    "explanation": "Un Data Mart ofrece datos específicos para un departamento o área de negocio."
+  },
+  {
+    "question": "¿Cuál es la función de la Staging Area en un DW?",
+    "options": [
+      "Almacenar datos finales para reporting",
+      "Capa temporal para extraer, limpiar y transformar datos",
+      "Esquema en estrella",
+      "Tabla de dimensiones"
+    ],
+    "correct": 1,
+    "explanation": "La Staging Area recibe datos brutos para su limpieza y transformación antes de cargar."
+  },
+  {
+    "question": "¿Qué operación OLAP implica desglose en niveles más detallados?",
+    "options": [
+      "Roll-Up",
+      "Slice & Dice",
+      "Drill-Down",
+      "Extract"
+    ],
+    "correct": 2,
+    "explanation": "Drill-Down navega hacia niveles inferiores de detalle en un cubo multidimensional."
+  },
+  {
+    "question": "¿Qué operación OLAP agrega datos para una visión general?",
+    "options": [
+      "Drill-Down",
+      "Roll-Up",
+      "Slice & Dice",
+      "Transform"
+    ],
+    "correct": 1,
+    "explanation": "Roll-Up agrupa y resume datos a un nivel más alto de agregación."
+  },
+  {
+    "question": "¿Qué operación OLAP permite filtrar y reorganizar datos?",
+    "options": [
+      "Slice & Dice",
+      "Drill-Down",
+      "Normalize",
+      "Cascade"
+    ],
+    "correct": 0,
+    "explanation": "Slice & Dice corta segmentos y reorienta ejes para distintos análisis."
+  },
+  {
+    "question": "¿Cuál es la forma correcta de seleccionar todas las columnas de la tabla `customers`?",
+    "options": [
+      "SELECT * FROM customers;",
+      "SELECT ALL COLUMNS FROM customers;",
+      "SELECT customers.*;",
+      "SELECT COLUMNS(*) FROM customers;"
+    ],
+    "correct": 0,
+    "explanation": "`SELECT * FROM customers;` devuelve todas las columnas de la tabla."
+  },
+  {
+    "question": "¿Cómo insertas un nuevo usuario en la tabla `users` con columnas `id`, `name` y `email`?",
+    "options": [
+      "INSERT INTO users VALUES (1, 'Ana', 'ana@mail.com');",
+      "ADD INTO users (id,name,email) VALUES (1,'Ana','ana@mail.com');",
+      "INSERT users (id,name,email) VALUES (1,'Ana','ana@mail.com');",
+      "INSERT INTO users (id, name, email) VALUES (1, 'Ana', 'ana@mail.com');"
+    ],
+    "correct": 3,
+    "explanation": "La sintaxis es `INSERT INTO tabla (columnas) VALUES (valores);`."
+  },
+  {
+    "question": "¿Qué sentencia modifica el campo `status` a 'active' en la tabla `accounts` para id=5?",
+    "options": [
+      "UPDATE accounts SET status = 'active' WHERE id = 5;",
+      "MODIFY accounts SET status = 'active' WHERE id = 5;",
+      "UPDATE accounts WHERE id = 5 SET status = 'active';",
+      "SET status = 'active' IN accounts WHERE id = 5;"
+    ],
+    "correct": 0,
+    "explanation": "`UPDATE tabla SET columna = valor WHERE condición;` es la sintaxis correcta."
+  },
+  {
+    "question": "¿Cómo eliminas todos los registros de la tabla `logs` creados antes de 2020?",
+    "options": [
+      "DELETE FROM logs WHERE date < '2020-01-01';",
+      "REMOVE FROM logs WHEN date < '2020-01-01';",
+      "DELETE logs WHERE date < '2020-01-01';",
+      "DROP FROM logs WHERE date < '2020-01-01';"
+    ],
+    "correct": 0,
+    "explanation": "`DELETE FROM tabla WHERE condición;` borra filas que cumplan la condición."
+  },
+  {
+    "question": "¿Qué comando crea la tabla `products` con columnas `id` (entero) y `name` (texto)?",
+    "options": [
+      "CREATE products (id INT, name VARCHAR(100));",
+      "MAKE TABLE products (id INT, name VARCHAR(100));",
+      "CREATE TABLE products (id INT, name VARCHAR(100));",
+      "NEW TABLE products id INT, name VARCHAR(100);"
+    ],
+    "correct": 2,
+    "explanation": "`CREATE TABLE nombre (columna tipo, ...);` es la sintaxis estándar."
+  },
+  {
+    "question": "¿Cómo añades una columna `email` (texto) a la tabla `customers`?",
+    "options": [
+      "ALTER customers ADD email VARCHAR(255);",
+      "ALTER TABLE customers ADD COLUMN email VARCHAR(255);",
+      "MODIFY TABLE customers ADD email VARCHAR(255);",
+      "ALTER TABLE customers NEW COLUMN email VARCHAR(255);"
+    ],
+    "correct": 1,
+    "explanation": "`ALTER TABLE tabla ADD COLUMN nombre tipo;` añade una columna."
+  },
+  {
+    "question": "¿Cuál consulta muestra el número de pedidos por `customer_id`, solo si tiene más de 5?",
+    "options": [
+      "SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id HAVING COUNT(*) > 5;",
+      "SELECT customer_id, COUNT(*) FROM orders WHERE COUNT(*) > 5 GROUP BY customer_id;",
+      "SELECT customer_id, COUNT(*) FROM orders GROUP BY customer_id WHERE COUNT(*) > 5;",
+      "SELECT customer_id, COUNT(*) FROM orders HAVING COUNT(*) > 5 GROUP BY customer_id;"
+    ],
+    "correct": 0,
+    "explanation": "`HAVING` filtra grupos tras `GROUP BY`; `WHERE` no puede usar funciones agregadas."
+  },
+  {
+    "question": "Dado `users` y `orders`, ¿qué cláusula une ambos por `user_id`?",
+    "options": [
+      "SELECT * FROM users JOIN orders ON users.id = orders.user_id;",
+      "SELECT * FROM users INNER orders ON users.id = orders.user_id;",
+      "SELECT * FROM users AND orders WHERE users.id = orders.user_id;",
+      "SELECT * FROM users OVER orders ON users.id = orders.user_id;"
+    ],
+    "correct": 0,
+    "explanation": "`JOIN ... ON` es la sintaxis para combinar filas de dos tablas según una condición."
+  },
+  {
+    "question": "¿Cómo creas un índice llamado `idx_name` en la columna `name` de `customers`?",
+    "options": [
+      "CREATE INDEX idx_name ON customers(name);",
+      "ADD INDEX idx_name ON customers(name);",
+      "CREATE idx_name ON customers(name);",
+      "INDEX customers(name) AS idx_name;"
+    ],
+    "correct": 0,
+    "explanation": "`CREATE INDEX nombre ON tabla(columna);` acelera búsquedas en esa columna."
+  }
+]
