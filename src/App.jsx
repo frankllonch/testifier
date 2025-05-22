@@ -90,8 +90,15 @@ export default function App() {
           alignItems: 'center',
           position: 'relative',
           '&::after': {
-            content: '""', position: 'absolute', top: 0, left: 0,
-            width: '100%', height: '100%', bgcolor: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(4px)', zIndex: 1
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            bgcolor: 'rgba(255,255,255,0.6)',
+            backdropFilter: 'blur(4px)',
+            zIndex: 1
           }
         }}
       >
@@ -100,9 +107,17 @@ export default function App() {
             key={t.id}
             onClick={() => startQuiz(t.id)}
             sx={{
-              fontFamily: 'Futura, sans-serif', fontSize: '8rem', color: 'black', cursor: 'pointer', userSelect: 'none',
-              position: 'relative', zIndex: 2, textShadow: '0 2px 4px rgba(0,0,0,0.4)', transition: '0.2s',
-              '&:hover': { color: 'primary.main', transform: 'scale(1.1)' }, '&:active': { color: 'error.main' }
+              fontFamily: 'Futura, sans-serif',
+              fontSize: '8rem',
+              color: 'black',
+              cursor: 'pointer',
+              userSelect: 'none',
+              position: 'relative',
+              zIndex: 2,
+              textShadow: '0 2px 4px rgba(0,0,0,0.4)',
+              transition: '0.2s',
+              '&:hover': { color: 'primary.main', transform: 'scale(1.1)' },
+              '&:active': { color: 'error.main' }
             }}
           >
             {t.title}
@@ -111,9 +126,17 @@ export default function App() {
         <Typography
           onClick={startExam}
           sx={{
-            fontFamily: 'Futura, sans-serif', fontSize: '8rem', color: 'black', cursor: 'pointer', userSelect: 'none',
-            position: 'relative', zIndex: 2, textShadow: '0 2px 4px rgba(0,0,0,0.4)', transition: '0.2s',
-            '&:hover': { color: 'primary.main', transform: 'scale(1.1)' }, '&:active': { color: 'error.main' }
+            fontFamily: 'Futura, sans-serif',
+            fontSize: '8rem',
+            color: 'black',
+            cursor: 'pointer',
+            userSelect: 'none',
+            position: 'relative',
+            zIndex: 2,
+            textShadow: '0 2px 4px rgba(0,0,0,0.4)',
+            transition: '0.2s',
+            '&:hover': { color: 'primary.main', transform: 'scale(1.1)' },
+            '&:active': { color: 'error.main' }
           }}
         >
           Examen
@@ -157,7 +180,7 @@ export default function App() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          p: 4,
+          p: 8,
           fontFamily: 'Futura, sans-serif',
           fontSize: '4rem',
           transition: 'color 0.2s',
@@ -170,22 +193,36 @@ export default function App() {
       </Box>
       <Box sx={{ flex: '1 1 auto', display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 2, p: 4 }}>
         {q.options.map((opt, i) => (
-          <Box key={i} onClick={() => handleSelect(i)} sx={{ display:'flex', alignItems:'center', justifyContent:'center', border:5, borderColor: answers[idx]===i?'primary.main':'grey.100', borderRadius:2, p:2, fontFamily:'Futura, sans-serif', fontSize:'1.5rem', cursor: answers[idx]==null?'pointer':'default', pointerEvents: answers[idx]!=null?'none':'auto', transition:'0.2s', boxShadow:10, '&:hover':{backgroundColor:'grey.100', transform:'scale(1.02)'}, '&:active':{backgroundColor:'primary.light', color:'white'} }}>
+          <Box
+            key={i}
+            onClick={() => handleSelect(i)}
+            sx={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              border: 5, borderColor: answers[idx] === i ? 'primary.main' : 'grey.100',
+              borderRadius: 5, p: 1, fontFamily: 'Futura, sans-serif', fontSize: '1.5rem',
+              cursor: answers[idx] == null ? 'pointer' : 'default', pointerEvents: answers[idx] != null ? 'none' : 'auto',
+              transition: '0.2s', boxShadow: 10,
+              '&:hover': { backgroundColor: 'grey.100', transform: 'scale(1.02)' },
+              '&:active': { backgroundColor: 'primary.light', color: 'white' }
+            }}
+          >
             {opt}
           </Box>
         ))}
       </Box>
-      {answers[idx]!=null && showImmediate && (
-        <Box sx={{ p:2, fontFamily:'Futura, sans-serif', fontSize:'1.5rem' }}>
-          {answers[idx]===q.correct ? '✔️ ¡Correcto!' : `❌ Incorrecto. Correcta: ${q.options[q.correct]}`}<Typography sx={{ mt:1, fontFamily:'Futura, sans-serif'}}>{q.explanation}</Typography>
+      {answers[idx] != null && showImmediate && (
+        <Box sx={{ p: 2, fontFamily: 'Futura, sans-serif', fontSize: '1.5rem' }}>
+          {answers[idx] === q.correct
+            ? '✔️ ¡Correcto!'
+            : `❌ Incorrecto. Correcta: ${q.options[q.correct]}`}<Typography sx={{ mt: 1, fontFamily: 'Futura, sans-serif' }}>{q.explanation}</Typography>
         </Box>
       )}
-      <Box sx={{ height:20, width:'100%', bgcolor:'grey.200' }}>
-        <Box sx={{ height:'100%', width:`${progress}%`, bgcolor:'yellow', transition:'width 0.2s' }} />
+      <Box sx={{ height: 20, width: '100%', bgcolor: 'grey.200' }}>
+        <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'yellow', transition: 'width 0.2s' }} />
       </Box>
-      <Box sx={{ p:2, textAlign:'center', bgcolor:'white' }}>
-        <Button variant="contained" onClick={idx<total-1?goNext:finishQuiz} sx={{ bgcolor:'primary.main','&:hover':{bgcolor:'secondary.dark'}, fontFamily:'Futura, sans-serif', fontSize:'1.25rem', px:4 }}>
-          {idx<total-1?'Siguiente':'Finalizar'}
+      <Box sx={{ p: 2, textAlign: 'center', bgcolor: 'white' }}>
+        <Button variant="contained" onClick={idx < total - 1 ? goNext : finishQuiz} sx={{ bgcolor: 'primary.main', '&:hover': { bgcolor: 'secondary.dark' }, fontFamily: 'Futura, sans-serif', fontSize: '1.25rem', px: 4 }}>
+          {idx < total - 1 ? 'Siguiente' : 'Finalizar'}
         </Button>
       </Box>
     </Box>
