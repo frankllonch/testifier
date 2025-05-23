@@ -35,16 +35,26 @@ export default function App() {
 
   useEffect(() => {
     if (!questions.length) return;
-    const sq = questions.map((q) => {
+
+    // --- Shuffle question order ---
+    const questionsCopy = [...questions];
+    for (let i = questionsCopy.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questionsCopy[i], questionsCopy[j]] = [questionsCopy[j], questionsCopy[i]];
+    }
+
+    // --- Shuffle options for each question ---
+    const sq = questionsCopy.map((q) => {
       const order = q.options.map((_, i) => i);
-      for (let i = order.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [order[i], order[j]] = [order[j], order[i]];
+      for (let k = order.length - 1; k > 0; k--) {
+        const j = Math.floor(Math.random() * (k + 1));
+        [order[k], order[j]] = [order[j], order[k]];
       }
       const newOptions = order.map((i) => q.options[i]);
       const newCorrect = order.findIndex((i) => i === q.correct);
       return { question: q.question, options: newOptions, correct: newCorrect, explanation: q.explanation };
     });
+
     setShuffledQuestions(sq);
     setIdx(0);
     setAnswers(Array(sq.length).fill(null));
@@ -57,10 +67,6 @@ export default function App() {
   };
   const startShuffle = () => {
     const all = temas.flatMap((t) => t.questions);
-    for (let i = all.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [all[i], all[j]] = [all[j], all[i]];
-    }
     setQuestions(all);
     setPage('quiz');
   };
@@ -220,15 +226,15 @@ export default function App() {
             key={i}
             onClick={() => handleSelect(i)}
             sx={{
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                border: 3,
-                borderColor: answers[idx] == null
-                  ? 'rgba(235,235,235,1)'
-                  : i === q.correct
-                    ? 'yellow'
-                    : i === answers[idx]
-                      ? 'black'
-                      : 'rgba(235,235,235,1)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              border: 3,
+              borderColor: answers[idx] == null
+                ? 'rgba(235,235,235,1)'
+                : i === q.correct
+                  ? 'yellow'
+                  : i === answers[idx]
+                    ? 'black'
+                    : 'rgba(235,235,235,1)',
               borderRadius: 1, p: 1, fontFamily: 'Futura, sans-serif', fontSize: '4rem',
               cursor: answers[idx] == null ? 'pointer' : 'default', pointerEvents: answers[idx] != null ? 'none' : 'auto',
               transition: '0.4s', boxShadow: 2,
@@ -247,11 +253,11 @@ export default function App() {
             : `❌ Tonto. Aprende: ${q.options[q.correct]}`}<Typography sx={{ mt: 2, fontFamily: 'Futura, sans-serif', fontSize: '2rem' }}>{q.explanation}</Typography>
         </Box>
       )}
-      <Box sx={{ height: 15, width: '100%', bgcolor: 'primary' }}>
+      <Box sx={{ height: 15, width: '100%', bgcolor: 'primary.main' }}>
         <Box sx={{ height: '100%', width: `${progress}%`, bgcolor: 'yellow', transition: 'width 0.2s' }} />
       </Box>
       <Box sx={{ p: 2, textAlign: 'center', bgcolor: 'rgba(235,235,235,1)' }}>
-        <Button variant="contained" onClick={idx < total - 1 ? goNext : finishQuiz} sx={{ bgcolor: 'rgba(235,235,235,1)', '&:hover': { bgcolor: 'rgba(215,215,215,1)', color:'primary.main' }, fontFamily: 'Futura, sans-serif', fontSize: '2rem',color: 'black', px: 3 }}>
+        <Button variant="contained" onClick={idx < total - 1 ? goNext : finishQuiz} sx={{ bgcolor: 'rgba(235,235,235,1)', '&:hover': { bgcolor: 'rgba(215,215,215,1)', color: 'primary.main' }, fontFamily: 'Futura, sans-serif', fontSize: '2rem', color: 'black', px: 3 }}>
           {idx < total - 1 ? 'Siguiente' : 'Finalizar'}
         </Button>
       </Box>
