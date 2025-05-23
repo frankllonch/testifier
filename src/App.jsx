@@ -90,13 +90,14 @@ export default function App() {
     return (
       <Box
         sx={{
-          width: '100vw',
+          width: '100%',
           minheight: '100vh',
           backgroundImage: `url(${bgStart})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           display: 'flex',
           flexDirection: 'column',
+          overflowX: 'hidden',
           justifyContent: 'space-evenly',
           alignItems: 'center',
           position: 'relative',
@@ -228,6 +229,9 @@ export default function App() {
             sx={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               border: 3,
+              minWidth: 0,               
+              wordBreak: 'break-word',  
+              whiteSpace: 'normal',       
               borderColor: answers[idx] == null
                 ? 'rgba(235,235,235,1)'
                 : i === q.correct
