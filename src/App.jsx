@@ -91,7 +91,7 @@ export default function App() {
       <Box
         sx={{
           width: '100vw',
-          height: '100vh',
+          minheight: '100vh',
           backgroundImage: `url(${bgStart})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
